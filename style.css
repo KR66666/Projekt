@@ -11,7 +11,6 @@ body {
   font-family: 'Source Sans 3', sans-serif;
 }
 
-/* NAVBAR */
 .navbar {
   position: sticky;
   top: 0;
@@ -21,6 +20,23 @@ body {
   justify-content: space-between;
   padding: 20px 60px;
   border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
 }
 
 .logo-title {
@@ -33,6 +49,23 @@ body {
   color: #777;
 }
 
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-left {
+  display: flex;
+  gap: 15px;
+  margin-left: 40px;
+}
+
+.menu-right {
+  display: flex;
+}
+
 .menu a {
   margin-left: 15px;
   padding: 8px 14px;
@@ -42,7 +75,6 @@ body {
   cursor: pointer;
 }
 
-/* HERO */
 .hero {
   display: flex;
   gap: 40px;
@@ -65,9 +97,10 @@ body {
   margin-bottom: 20px;
 }
 
-.hero-text p{
+.hero-text p {
   color: #6F7D5C;
 }
+
 .hero-text button {
   margin-top: 20px;
   background: #d9a08c;
@@ -76,7 +109,11 @@ body {
   border-radius: 20px;
 }
 
-/* TITLE */
+button p {
+  color: #6F7D5C;
+  font-weight: bold;
+}
+
 .title {
   padding: 0 60px 20px 60px;
 }
@@ -90,7 +127,6 @@ body {
   color: #777;
 }
 
-/* ABOUT */
 .about {
   display: flex;
   padding: 80px 60px;
@@ -108,8 +144,20 @@ body {
   margin-bottom: 20px;
 }
 
+.pray {
+  width: 150px;
+  height: 150px;
+  margin: 20px 10px;
+}
+
 .help {
   margin-top: 30px;
+}
+
+.help h3 {
+  color: #6F7D5C;
+  font-weight: bold;
+  font-size: 25px;
 }
 
 .divider {
@@ -131,6 +179,10 @@ body {
   margin: 0 auto 20px;
 }
 
+.circle p {
+  color: #6F7D5C;
+}
+
 .about-right button {
   margin-top: 20px;
   background: #d9a08c;
@@ -139,7 +191,11 @@ body {
   border-radius: 20px;
 }
 
-/* VISIT */
+.zivot {
+  color: #6F7D5C;
+  font-weight: bold;
+}
+
 .visit {
   display: flex;
   padding: 80px 60px;
@@ -152,19 +208,21 @@ body {
   margin-left: 75px;
 }
 
-.visit-left p{
-  margin-top: 10px;
-  font-weight: bold;
-  font-size: 15px;
-}
-
 .visit-left h2 {
   color: #6F7D5C;
   font-size: 36px;
 }
 
+.visit-left p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
 .icons {
-  margin-top: 30px;
+  margin-top: 150px;
+  height: 60px;
+  width: 60px;
   display: flex;
   gap: 30px;
 }
@@ -173,107 +231,87 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px;
+  padding-left: 80px;
 }
 
-input, select {
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid #F5F2EB;
-}
-
-.times {
-  display: flex;
-  gap: 10px;
-  background-color: rgba(224, 157, 141, 0.3);
-}
-
-.times button {
-  padding: 10px 15px;
-  border-radius: 20px;
-  border: none;
-}
-
-
-.main-btn {
-  padding: 15px;
-  border-radius: 20px;
-  border: none;
-}
-
-.logo {
+.date-select {
+  width: fit-content;
+  padding: 12px 22px;
+  background: #e6c3b6;
+  border-radius: 25px;
   display: flex;
   align-items: center;
-  gap: 12px;
-}
-
-.logo-img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.menu-left {
-  display: flex;
   gap: 15px;
-  margin-left: 40px; /* posune blíž k logu */
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: -100px;
 }
 
-.menu-right {
+.time-wrapper {
   display: flex;
+  background: #e6c3b6;
+  border-radius: 16px;
+  padding: 6px;
+  gap: 6px;
+  width: 450px;
+  height: 35px;
 }
 
-.menu a {
-  padding: 8px 14px;
-  border-radius: 20px;
-  border: 1px solid #ddd;
-  color: #6F7D5C;
+.time-wrapper button {
+  border: none;
+  background: transparent;
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
 }
 
-button p{
-  color:#6F7D5C ;
-  font-weight: bold;
+.time-wrapper .active {
+  background: #d39a86;
 }
 
-.pray{
-  width: 150px;
-  height: 150px;
-  margin: 20px 10px;
+.visit-right input {
+  width: 420px;
+  height: 30px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  border: 1px solid #e5e1dc;
+  background: #faf9f6;
+  font-size: 16px;
 }
 
-.help h3{
-  color: #6F7D5C;
-  font-weight: bold;
-  font-size: 25px;
+.pocet {
+  color: #6F7D5C99;
 }
 
-.circle p{
-  color: #6F7D5C;
+.guest-select {
+  width: 300px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  border: 1px solid #e5e1dc;
+  background: #faf9f6;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-left: 120px;
+  margin-top: -35px;
 }
 
-.zivot{
-  color: #6F7D5C;
-  font-weight: bold;
+.reserve-btn {
+  width: 300px;
+  height: 10px;
+  margin-top: 50px;
+  padding: 18px;
+  border-radius: 30px;
+  border: none;
+  background: #d39a86;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
-.icons{
-  height: 60px;
-  width: 60px;
-  margin-top: 150px;
-}
 
 .community {
   display: flex;
@@ -288,8 +326,8 @@ button p{
 }
 
 .community-item img {
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   object-fit: contain;
   margin-bottom: 25px;
 }
@@ -307,254 +345,68 @@ button p{
   margin-top: -10px;
 }
 
-.community-item img{
-  width: 200px;
-  height: 200px;
-}
-
-/* RIGHT FORM EXACT STYLE */
-
-.visit-right {
-
-  flex: 1;
-
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 18px;
-
-  padding-left: 80px;
-
-}
-
-
-/* DATE BUTTON */
-
-.date-select {
-
-  width: fit-content;
-
-  padding: 12px 22px;
-
-  background: #e6c3b6;
-
-  border-radius: 25px;
-
-  display: flex;
-
-  align-items: center;
-
-  gap: 15px;
-
-  font-size: 20px;
-
-  cursor: pointer;
-margin-top: -100px;
-}
-
-
-/* TIME BAR */
-
-.time-wrapper {
-
-  display: flex;
-
-  background: #e6c3b6;
-
-  border-radius: 16px;
-
-  padding: 6px;
-
-  gap: 6px;
-
-  width: 450px;
-  height: 35px;
-
-}
-
-
-.time-wrapper button {
-
-  border: none;
-
-  background: transparent;
-
-  padding: 8px 18px;
-
-  border-radius: 5px;
-
-  font-size: 16px;
-
-  cursor: pointer;
-
-}
-
-
-.time-wrapper .active {
-
-  background: #d39a86;
-
-}
-
-
-/* INPUTS */
-
-.visit-right input {
-
-  width: 420px;
-  height: 30px;
-  padding: 16px 20px;
-
-  border-radius: 14px;
-
-  border: 1px solid #e5e1dc;
-
-  background: #faf9f6;
-
-  font-size: 16px;
-}
-
-
-/* GUEST SELECT */
-
-.guest-select {
-
-  width: 300px;
-
-  padding: 16px 20px;
-
-  border-radius: 14px;
-
-  border: 1px solid #e5e1dc;
-
-  background: #faf9f6;
-
-  display: flex;
-
-  justify-content: space-between;
-  cursor: pointer;
-  margin-left: 120px;
-  margin-top: -35px;
-
-}
-
-.pocet{
-  color:#6F7D5C99;
-}
-/* BUTTON */
-
-.reserve-btn {
-  width: 300px;
-  height: 10px;
-  margin-top: 50px;
-  padding: 18px;
-  border-radius: 30px;
-  border: none;
-  background: #d39a86;
-  font-weight: 600;
-  font-size: 16px;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
- 
 .services {
-
   display: flex;
-
   padding: 80px 60px;
-
   gap: 40px;
-
 }
 
 .services-left {
-
   flex: 1;
-
 }
 
 .services-left h2 {
-
   color: #6F7D5C;
-
   margin-bottom: 10px;
-
 }
 
 .services-left p {
-
   color: #555;
-
   margin-bottom: 20px;
-
 }
 
 table {
-
   width: 100%;
-
   border-collapse: collapse;
-
   margin-bottom: 20px;
-
 }
 
-table th, table td {
-
+table th,
+table td {
   text-align: left;
-
   padding: 8px 0;
-
   border-bottom: 1px solid #ddd;
-
 }
 
 .services-left h3 {
-
   margin-top: 20px;
-
   color: #333;
-
 }
 
 .services-right {
-
   flex: 1;
-
   text-align: center;
-
 }
 
 .services-right h2 {
-
   color: #6F7D5C;
-
 }
 
 .service-icons {
-
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 20px;
-
   margin: 30px 0;
-
 }
 
 .service-icons div {
-
   border: 1px solid #ddd;
-
   padding: 20px;
-
   border-radius: 15px;
-
 }
- .reserve-button{
-   width: 300px;
+
+.reserve-button {
+  width: 300px;
   height: 60px;
   margin-top: 50px;
   padding: 18px;
@@ -565,4 +417,4 @@ table th, table td {
   font-size: 16px;
   letter-spacing: 1px;
   cursor: pointer;
- }
+}
